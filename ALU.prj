@@ -1,0 +1,4 @@
+vhdl work "OutputSelect.vhd"
+vhdl work "InputSelect.vhd"
+vhdl work "Adder.vhd"
+vhdl work "ALU.vhd"

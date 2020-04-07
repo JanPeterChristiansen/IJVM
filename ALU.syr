@@ -1,0 +1,353 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ALU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ALU"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : ALU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\japem\Documents\repos\VHDL\IJVM\OutputSelect.vhd" into library work
+Parsing entity <OutputSelect>.
+Parsing architecture <Behavioral> of entity <outputselect>.
+Parsing VHDL file "C:\Users\japem\Documents\repos\VHDL\IJVM\InputSelect.vhd" into library work
+Parsing entity <InputSelect>.
+Parsing architecture <Behavioral> of entity <inputselect>.
+Parsing VHDL file "C:\Users\japem\Documents\repos\VHDL\IJVM\Adder.vhd" into library work
+Parsing entity <Adder>.
+Parsing architecture <Behavioral> of entity <adder>.
+Parsing VHDL file "C:\Users\japem\Documents\repos\VHDL\IJVM\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Behavioral> of entity <alu>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <ALU> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <InputSelect> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Adder> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:634 - "C:\Users\japem\Documents\repos\VHDL\IJVM\Adder.vhd" Line 45: Net <tempA[8]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\japem\Documents\repos\VHDL\IJVM\Adder.vhd" Line 46: Net <tempB[8]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\japem\Documents\repos\VHDL\IJVM\Adder.vhd" Line 47: Net <tempINC[8]> does not have a driver.
+
+Elaborating entity <OutputSelect> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:\Users\japem\Documents\repos\VHDL\IJVM\ALU.vhd".
+    Summary:
+	no macro.
+Unit <ALU> synthesized.
+
+Synthesizing Unit <InputSelect>.
+    Related source file is "C:\Users\japem\Documents\repos\VHDL\IJVM\InputSelect.vhd".
+    Found 8-bit 4-to-1 multiplexer for signal <QA> created at line 57.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <InputSelect> synthesized.
+
+Synthesizing Unit <Adder>.
+    Related source file is "C:\Users\japem\Documents\repos\VHDL\IJVM\Adder.vhd".
+WARNING:Xst:2935 - Signal 'tempA<8>', unconnected in block 'Adder', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'tempB<8>', unconnected in block 'Adder', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'tempINC<8:1>', unconnected in block 'Adder', is tied to its initial value (00000000).
+    Found 9-bit adder for signal <n0020> created at line 55.
+    Found 9-bit adder for signal <tempSUM> created at line 55.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <Adder> synthesized.
+
+Synthesizing Unit <OutputSelect>.
+    Related source file is "C:\Users\japem\Documents\repos\VHDL\IJVM\OutputSelect.vhd".
+    Found 8-bit 4-to-1 multiplexer for signal <OUTPUT> created at line 46.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <OutputSelect> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 9-bit adder                                           : 2
+# Multiplexers                                         : 3
+ 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 9-bit adder carry in                                  : 1
+# Multiplexers                                         : 3
+ 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ALU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ALU, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ALU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 40
+#      LUT3                        : 8
+#      LUT5                        : 8
+#      LUT6                        : 8
+#      MUXCY                       : 8
+#      XORCY                       : 8
+# IO Buffers                       : 31
+#      IBUF                        : 22
+#      OBUF                        : 9
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                   24  out of   5720     0%  
+    Number used as Logic:                24  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     24
+   Number with an unused Flip Flop:      24  out of     24   100%  
+   Number with an unused LUT:             0  out of     24     0%  
+   Number of fully used LUT-FF pairs:     0  out of     24     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          31
+ Number of bonded IOBs:                  31  out of    102    30%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 8.710ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 393 / 9
+-------------------------------------------------------------------------
+Delay:               8.710ns (Levels of Logic = 12)
+  Source:            ControlSignal<1> (PAD)
+  Destination:       OUTPUT<7> (PAD)
+
+  Data Path: ControlSignal<1> to OUTPUT<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.328   1.410  ControlSignal_1_IBUF (ControlSignal_1_IBUF)
+     LUT3:I0->O            1   0.235   0.681  InputSelect/Mmux_QA11 (QA<0>)
+     MUXCY:DI->O           1   0.181   0.000  Adder/Madd_tempSUM_Madd_cy<0> (Adder/Madd_tempSUM_Madd_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Adder/Madd_tempSUM_Madd_cy<1> (Adder/Madd_tempSUM_Madd_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Adder/Madd_tempSUM_Madd_cy<2> (Adder/Madd_tempSUM_Madd_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Adder/Madd_tempSUM_Madd_cy<3> (Adder/Madd_tempSUM_Madd_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Adder/Madd_tempSUM_Madd_cy<4> (Adder/Madd_tempSUM_Madd_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Adder/Madd_tempSUM_Madd_cy<5> (Adder/Madd_tempSUM_Madd_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Adder/Madd_tempSUM_Madd_cy<6> (Adder/Madd_tempSUM_Madd_cy<6>)
+     XORCY:CI->O           1   0.206   0.682  Adder/Madd_tempSUM_Madd_xor<7> (SUM<7>)
+     LUT6:I5->O            1   0.254   0.681  OutputSelect/Mmux_OUTPUT81 (OUTPUT_7_OBUF)
+     OBUF:I->O                 2.912          OUTPUT_7_OBUF (OUTPUT<7>)
+    ----------------------------------------
+    Total                      8.710ns (5.256ns logic, 3.454ns route)
+                                       (60.3% logic, 39.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.80 secs
+ 
+--> 
+
+Total memory usage is 4511352 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

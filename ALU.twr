@@ -1,0 +1,191 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml ALU.twx ALU.ncd -o ALU.twr ALU.pcf
+
+Design file:              ALU.ncd
+Physical constraint file: ALU.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+----------------+---------------+---------+
+Source Pad      |Destination Pad|  Delay  |
+----------------+---------------+---------+
+A<0>            |CARRY          |   14.757|
+A<0>            |OUTPUT<0>      |   14.894|
+A<0>            |OUTPUT<1>      |   15.126|
+A<0>            |OUTPUT<2>      |   15.012|
+A<0>            |OUTPUT<3>      |   15.623|
+A<0>            |OUTPUT<4>      |   15.595|
+A<0>            |OUTPUT<5>      |   15.757|
+A<0>            |OUTPUT<6>      |   15.111|
+A<0>            |OUTPUT<7>      |   15.804|
+A<1>            |CARRY          |   15.468|
+A<1>            |OUTPUT<1>      |   14.637|
+A<1>            |OUTPUT<2>      |   15.800|
+A<1>            |OUTPUT<3>      |   16.391|
+A<1>            |OUTPUT<4>      |   16.306|
+A<1>            |OUTPUT<5>      |   16.468|
+A<1>            |OUTPUT<6>      |   15.822|
+A<1>            |OUTPUT<7>      |   16.515|
+A<2>            |CARRY          |   14.324|
+A<2>            |OUTPUT<2>      |   14.289|
+A<2>            |OUTPUT<3>      |   15.216|
+A<2>            |OUTPUT<4>      |   15.162|
+A<2>            |OUTPUT<5>      |   15.324|
+A<2>            |OUTPUT<6>      |   14.678|
+A<2>            |OUTPUT<7>      |   15.371|
+A<3>            |CARRY          |   14.362|
+A<3>            |OUTPUT<3>      |   14.864|
+A<3>            |OUTPUT<4>      |   15.200|
+A<3>            |OUTPUT<5>      |   15.362|
+A<3>            |OUTPUT<6>      |   14.716|
+A<3>            |OUTPUT<7>      |   15.409|
+A<4>            |CARRY          |   14.995|
+A<4>            |OUTPUT<4>      |   14.326|
+A<4>            |OUTPUT<5>      |   15.822|
+A<4>            |OUTPUT<6>      |   15.306|
+A<4>            |OUTPUT<7>      |   16.005|
+A<5>            |CARRY          |   14.582|
+A<5>            |OUTPUT<5>      |   14.635|
+A<5>            |OUTPUT<6>      |   14.970|
+A<5>            |OUTPUT<7>      |   15.649|
+A<6>            |CARRY          |   14.783|
+A<6>            |OUTPUT<6>      |   14.407|
+A<6>            |OUTPUT<7>      |   15.819|
+A<7>            |CARRY          |   14.773|
+A<7>            |OUTPUT<7>      |   15.293|
+B<0>            |CARRY          |   14.846|
+B<0>            |OUTPUT<0>      |   15.217|
+B<0>            |OUTPUT<1>      |   15.229|
+B<0>            |OUTPUT<2>      |   15.117|
+B<0>            |OUTPUT<3>      |   15.715|
+B<0>            |OUTPUT<4>      |   15.684|
+B<0>            |OUTPUT<5>      |   15.846|
+B<0>            |OUTPUT<6>      |   15.200|
+B<0>            |OUTPUT<7>      |   15.893|
+B<1>            |CARRY          |   13.941|
+B<1>            |OUTPUT<1>      |   14.247|
+B<1>            |OUTPUT<2>      |   14.220|
+B<1>            |OUTPUT<3>      |   14.829|
+B<1>            |OUTPUT<4>      |   14.779|
+B<1>            |OUTPUT<5>      |   14.941|
+B<1>            |OUTPUT<6>      |   14.295|
+B<1>            |OUTPUT<7>      |   14.988|
+B<2>            |CARRY          |   13.487|
+B<2>            |OUTPUT<2>      |   13.766|
+B<2>            |OUTPUT<3>      |   14.371|
+B<2>            |OUTPUT<4>      |   14.325|
+B<2>            |OUTPUT<5>      |   14.487|
+B<2>            |OUTPUT<6>      |   13.841|
+B<2>            |OUTPUT<7>      |   14.534|
+B<3>            |CARRY          |   13.742|
+B<3>            |OUTPUT<3>      |   14.569|
+B<3>            |OUTPUT<4>      |   14.580|
+B<3>            |OUTPUT<5>      |   14.742|
+B<3>            |OUTPUT<6>      |   14.096|
+B<3>            |OUTPUT<7>      |   14.789|
+B<4>            |CARRY          |   13.916|
+B<4>            |OUTPUT<4>      |   14.609|
+B<4>            |OUTPUT<5>      |   14.757|
+B<4>            |OUTPUT<6>      |   14.243|
+B<4>            |OUTPUT<7>      |   14.929|
+B<5>            |CARRY          |   13.118|
+B<5>            |OUTPUT<5>      |   13.882|
+B<5>            |OUTPUT<6>      |   13.453|
+B<5>            |OUTPUT<7>      |   14.150|
+B<6>            |CARRY          |   13.498|
+B<6>            |OUTPUT<6>      |   13.833|
+B<6>            |OUTPUT<7>      |   14.526|
+B<7>            |CARRY          |   13.159|
+B<7>            |OUTPUT<7>      |   14.130|
+ControlSignal<0>|CARRY          |   14.302|
+ControlSignal<0>|OUTPUT<0>      |   14.730|
+ControlSignal<0>|OUTPUT<1>      |   14.773|
+ControlSignal<0>|OUTPUT<2>      |   14.552|
+ControlSignal<0>|OUTPUT<3>      |   15.204|
+ControlSignal<0>|OUTPUT<4>      |   15.140|
+ControlSignal<0>|OUTPUT<5>      |   15.302|
+ControlSignal<0>|OUTPUT<6>      |   14.656|
+ControlSignal<0>|OUTPUT<7>      |   15.349|
+ControlSignal<1>|CARRY          |   14.772|
+ControlSignal<1>|OUTPUT<0>      |   14.780|
+ControlSignal<1>|OUTPUT<1>      |   15.000|
+ControlSignal<1>|OUTPUT<2>      |   14.886|
+ControlSignal<1>|OUTPUT<3>      |   15.497|
+ControlSignal<1>|OUTPUT<4>      |   15.469|
+ControlSignal<1>|OUTPUT<5>      |   15.631|
+ControlSignal<1>|OUTPUT<6>      |   15.083|
+ControlSignal<1>|OUTPUT<7>      |   15.782|
+ControlSignal<2>|CARRY          |   13.977|
+ControlSignal<2>|OUTPUT<0>      |   14.348|
+ControlSignal<2>|OUTPUT<1>      |   14.360|
+ControlSignal<2>|OUTPUT<2>      |   14.248|
+ControlSignal<2>|OUTPUT<3>      |   14.846|
+ControlSignal<2>|OUTPUT<4>      |   14.815|
+ControlSignal<2>|OUTPUT<5>      |   14.977|
+ControlSignal<2>|OUTPUT<6>      |   14.331|
+ControlSignal<2>|OUTPUT<7>      |   15.024|
+ControlSignal<3>|CARRY          |   15.185|
+ControlSignal<3>|OUTPUT<0>      |   15.291|
+ControlSignal<3>|OUTPUT<1>      |   15.554|
+ControlSignal<3>|OUTPUT<2>      |   15.440|
+ControlSignal<3>|OUTPUT<3>      |   16.051|
+ControlSignal<3>|OUTPUT<4>      |   16.023|
+ControlSignal<3>|OUTPUT<5>      |   16.185|
+ControlSignal<3>|OUTPUT<6>      |   15.539|
+ControlSignal<3>|OUTPUT<7>      |   16.232|
+ControlSignal<4>|OUTPUT<0>      |   12.600|
+ControlSignal<4>|OUTPUT<1>      |   12.309|
+ControlSignal<4>|OUTPUT<2>      |   12.160|
+ControlSignal<4>|OUTPUT<3>      |   12.324|
+ControlSignal<4>|OUTPUT<4>      |   12.182|
+ControlSignal<4>|OUTPUT<5>      |   12.089|
+ControlSignal<4>|OUTPUT<6>      |   11.757|
+ControlSignal<4>|OUTPUT<7>      |   12.229|
+ControlSignal<5>|OUTPUT<0>      |   13.408|
+ControlSignal<5>|OUTPUT<1>      |   13.381|
+ControlSignal<5>|OUTPUT<2>      |   13.084|
+ControlSignal<5>|OUTPUT<3>      |   13.445|
+ControlSignal<5>|OUTPUT<4>      |   13.074|
+ControlSignal<5>|OUTPUT<5>      |   13.506|
+ControlSignal<5>|OUTPUT<6>      |   12.965|
+ControlSignal<5>|OUTPUT<7>      |   13.022|
+----------------+---------------+---------+
+
+
+Analysis completed Tue Apr 07 13:57:08 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4573 MB
+
+
+
